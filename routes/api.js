@@ -4,6 +4,7 @@
 var express = require('express');
 var router = express.Router();
 
+
 router.route('/posts')
     .get(function(req,res){
         res.send({
