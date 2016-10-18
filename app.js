@@ -6,9 +6,18 @@ var passport = require('passport');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
+var sql = require('mssql');
+
+//Connect SQL
+var dbConfig = {
+    server: 'localhost',
+    database: 'db',
+    user: '',
+    password: '',
+    port: ''
+}
 
 var app = express();
 
