@@ -6,9 +6,10 @@ var passport = require('passport');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
+var index  = require('./routes/index');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
-var sql = require('mssql');
 
 //Connect SQL
 var dbConfig = {
@@ -43,6 +44,7 @@ app.use(passport.session());
 var initPassport = require('./passport-init');
 initPassport(passport);
 
+app.use('/',index);
 app.use('/api',api);
 app.use('/auth', authenticate);
 
