@@ -50,5 +50,5 @@ app.controller('articuloCtrl',function($scope,$rootScope,$routeParams){
         $scope.codigoBarra = "1235468961"
     }
 
-    $scope.tipoMaterial = $scope.tipoMaterial[1];
+    //$scope.tipoMaterial = $scope.tipoMaterial[1];
 });
