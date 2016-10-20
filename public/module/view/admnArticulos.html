@@ -5,7 +5,7 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <select class="form-control">
-                            <option value="">Seleccione el tipo de articulo</option>
+                            <option value="1">Medicamentos</option>
                         </select>
                     </div>
                 </div>
@@ -22,9 +22,17 @@
     </div>
 </div>
 <div class="box box-widget">
-    <div class="box-body no no-padding">
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-success btn-group-xs pull-right" href="#/articulo/0">
+                    <li class="fa fa-plus"></li>
+                    Material
+                </a>
+            </div>
+        </div>
         <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-condensed table-striped">
                 <thead>
                     <tr>
                         <th></th>
@@ -47,9 +55,9 @@
                         <td>{{articulo.presentacion}}</td>
                         <td>{{articulo.disponible}}</td>
                         <td>
-                            <button class="btn btn-primary">
+                            <a class="btn btn-primary" href="#/articulo/1">
                                 <li class="fa fa-edit"></li>
-                            </button>
+                            </a>
                         </td>
                     </tr>
                 </tbody>

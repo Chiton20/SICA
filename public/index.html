@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portal Administrativo</title>
+    <title>Intranet</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -19,7 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Theme style -->
     <link rel="stylesheet" href="./stylesheets/adminlte/css/AdminLTE.min.css">
     <!-- Skin blue -->
-    <link rel="stylesheet" href="./stylesheets/adminlte/css/skins/skin-green.min.css">
+    <link rel="stylesheet" href="./stylesheets/adminlte/css/skins/skin-green.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,12 +57,12 @@ desired effect
         <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">
-                <img class="img-responsive center-block" alt="#" src="/css/sb-dgaf/img/logo-fmf.png">
+                <img class="img-responsive center-block" alt="#" src="./images/logo-fmf.png">
             </span>
             <!-- logo for regular state and mobile devices -->
             <span class="logol-g">
                 <b>Intranet</b>
-                <img src="/css/sb-dgaf/img/logo-fmf.png" alt="#">
+                <img src="./images/logo-fmf.png" alt="#">
             </span>
         </a>
         <!-- Header Navbar -->
@@ -90,7 +90,7 @@ desired effect
                                         <a href="#">
                                             <div class="pull-left">
                                                 <!-- User Image -->
-                                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                <img src="./images/user2.png" class="img-circle" alt="User Image">
                                             </div>
                                             <!-- Message title and timestamp -->
                                             <h4>
@@ -174,14 +174,14 @@ desired effect
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="./images/user2.png" class="user-image" alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">Alexander Pierce</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="./images/user2.png" class="img-circle" alt="User Image">
 
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -229,7 +229,7 @@ desired effect
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="./images/user2.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>Alexander Pierce</p>
@@ -240,8 +240,17 @@ desired effect
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                 <li class="header">Control del Almacenes</li>
-                <li class="active">
-                    <a href="#"><i class="fa fa-wrench"></i> <span>Administracion</span></a>
+                <li class="treeview">
+                    <a href="">
+                        <i class="fa fa-wrench"></i>
+                        <span>Administracion</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#/articulos">Articulos</a></li>
+                    </ul>
                 </li>
             </ul>
             <!-- /.sidebar-menu -->
@@ -252,10 +261,10 @@ desired effect
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>
+            <!--<h1>
                 Page Header
                 <small>Optional description</small>
-            </h1>
+            </h1>-->
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
                 <li class="active">Here</li>

@@ -5,9 +5,13 @@ var app = angular.module('sicaApp',['ngRoute']);
 
 app.config(function($routeProvider){
     $routeProvider
-        .when('/',{
+        .when('/articulos',{
             templateUrl: './module/view/admnArticulos.html',
             controller: 'articulosCtrl'
+        })
+        .when('/articulo/:tipo',{
+            templateUrl: './module/view/articulo.html',
+            controller: 'articuloCtrl'
         })
 });
 
@@ -30,5 +34,21 @@ app.controller('articulosCtrl',function($scope, $rootScope){
     }
 
     cargaArticulos();
-    console.log("aqui ta!!")
+});
+
+app.controller('articuloCtrl',function($scope,$rootScope,$routeParams){
+    $scope.articulo = $routeParams.tipo;
+
+    if($scope.articulo != 0){
+        $scope.tipoMaterial = {id:1};
+        $scope.nombre = "Voltaren Retard";
+        $scope.sal = "Diclofenaco";
+        $scope.tipo = 1;
+        $scope.presentacion = "Grajeas";
+        $scope.noSAP = 100000001;
+        $scope.subTipo = "Cox no selectivo";
+        $scope.codigoBarra = "1235468961"
+    }
+
+    $scope.tipoMaterial = $scope.tipoMaterial[1];
 });

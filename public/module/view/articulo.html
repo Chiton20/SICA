@@ -1,0 +1,100 @@
+<div class="box box-info">
+    <div class="box-body">
+        <form>
+            <div class="row" ng-show="articulo == 0">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Tipo Material</label>
+                        <select class="form-control" ng-model="tipoMaterial" ng-init="tipoMaterial = 1">
+                            <option value="1">Medicamentos</option>
+                            <option value="2">Equipo Medico</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-show="tipoMaterial == 1">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese el nombre del medicamento" ng-model="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Sal:</label>
+                        <input type="text" class="form-control" placeholder="Ingrese la sal del medicamento" ng-model="sal">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo</label>
+                        <select class="form-control" ng-model="tipo">
+                            <option value="">Seleccione el tipo</option>
+                            <option value="1">Antiinflamatorio</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Presentacion</label>
+                        <input type="text" class="form-control" ng-model="presentacion">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>No. SAP</label>
+                        <input type="text" class="form-control" ng-model="noSAP">
+                    </div>
+                    <div class="form-group">
+                        <label>Unidad de medida</label>
+                        <input type="text" class="form-control" ng-model="unidadMedida">
+                    </div>
+                    <div class="form-group">
+                        <label>Subtipo</label>
+                        <input type="text" class="form-control" ng-model="subTipo">
+                    </div>
+                    <div class="form-group">
+                        <label>Codigo de barras</label>
+                        <input type="text" class="form-control" ng-model="codigoBarra">
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-show="tipoMaterial == 2">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control" placeholder="" ng-model="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Marca</label>
+                        <input type="text" class="form-control" placeholder="" ng-model="marca">
+                    </div>
+                    <div class="form-group">
+                        <label>Codigo de barras</label>
+                        <input type="text" class="form-control" ng-model="codigoBarra">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>No. SAP</label>
+                        <input type="text" class="form-control" placeholder="" ng-model="noSAP">
+                    </div>
+                    <div class="form-group">
+                        <label>Unidad</label>
+                        <input type="text" class="form-control" placeholder="" ng-model="unidad">
+                    </div>
+                    <div class="form-group">
+                        <label>Especificaciones</label>
+                        <textarea type="text" class="form-control" ng-model="especificacion"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" class="form-group" ng-model="imagen">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="box-footer">
+        <a class="btn btn-danger" href="#/articulos">Cancelar</a>
+        <button class="btn btn-success pull-right" type="button">Aceptar</button>
+    </div>
+</div>
